@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="themes/default/global.css" type="text/css" id="csstheme" />
+<link rel="shortcut icon" href="images/themes/default/Favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" type="image/png" href="images/themes/default/Introduction.png" />
+<script type="text/javascript" src="libraries/js/jquery.js"></script><script type="text/javascript">// <!-- 
+$(function() { 
+  if (window.parent.frames.length > 1)
+    $('#csstheme', window.parent.frames[0].document).attr('href','themes/default/global.css');
+}); // --></script>
+<title>phpPgAdmin - Login</title>
+</head>
+<body>
+<div class="topbar"><table style="width: 100%"><tr><td><span class="appname">phpPgAdmin</span> <span class="version">7.13.0</span></tr></table></div>
+<div class="trail"><table><tr><td class="crumb"><a href="redirect.php?subject=root"><span class="icon"><img src="images/themes/default/Introduction.png" alt="Database Root" /></span><span class="label">phpPgAdmin</span></a>: </td></tr></table></div>
+<h2>Login to PostgreSQL</h2>
+
+<form id="login_form" action="redirect.php" method="post" name="login_form">
+<input type="hidden" name="subject" value="server" />
+<input type="hidden" name="server" value="localhost:5432:allow" />
+	<input type="hidden" name="loginServer" value="localhost:5432:allow" />
+	<table class="navbar" border="0" cellpadding="5" cellspacing="3">
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="loginUsername" value="" size="24" /></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input id="loginPassword" type="password" name="loginPassword_451ff50a1b7f02422c818da4dd377d27" size="24" /></td>
+		</tr>
+	</table>
+	<p><input type="submit" name="loginSubmit" value="Login" /></p>
+</form>
+
+<script type="text/javascript">
+	var uname = document.login_form.loginUsername;
+	var pword = document.login_form.loginPassword_451ff50a1b7f02422c818da4dd377d27;
+	if (uname.value == "") {
+		uname.focus();
+	} else {
+		pword.focus();
+	}
+</script>
+
+<a href="#" class="bottom_link">back to top</a></body>
+</html>
